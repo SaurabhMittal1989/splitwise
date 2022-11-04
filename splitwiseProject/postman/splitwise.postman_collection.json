@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "d65f8589-be6c-4a38-93da-ba5b24f83bcd",
+		"name": "splitwise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/transaction/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"transaction",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "amount",
+							"value": "1200",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/transaction/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"transaction",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update port1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "transactionid",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:{{port1}}/transactions/update?",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port1}}",
+					"path": [
+						"transactions",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restore port2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "transactionid",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:{{port1}}/transactions/update?",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port1}}",
+					"path": [
+						"transactions",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port1",
+			"value": "8000",
+			"type": "default"
+		}
+	]
+}
